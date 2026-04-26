@@ -1,10 +1,4 @@
-format = """
-$directory\
-$git_status\
-$git_state\
-$git_branch\
-$character\
-"""
+format = "$directory$git_status$git_state$git_branch$character"
 
 add_newline = false
 
@@ -23,4 +17,9 @@ style = 'bold purple'
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
-style = 'bold red'
+style = 'blue'
+staged = '[+](bold green)'
+ahead = '[⇡](bold purple)'
+untracked = '[?](bold blue)'
+modified = '[!](bold yellow)'
+deleted = '[✘](bold red)'
